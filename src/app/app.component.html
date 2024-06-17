@@ -1,0 +1,30 @@
+<div class="container">
+  <h1> Attributes Directives -ngclass</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p [ngClass]="{
+        Red:highlightcolor === 'Red',
+        'Green-color':highlightcolor === 'Green',
+        Blue:highlightcolor === 'Blue'
+      }">Click my button to highlight me</p>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-danger" (click)="highlight('Red')">Red</button>
+      <button class="btn btn-success" (click)="highlight('Green')">Green</button>
+      <button class="btn btn-primary" (click)="highlight('Blue')">Blue</button>
+    </div>
+  </div>
+  <h1> Attributes Directives -ngStyle</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p [ngStyle]="{
+        color:isstyledApplied === true ? 'white':'black',
+        backgroundColor: isstyledApplied  ? 'green': 'white'
+      }">Click my button to toggle style</p>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-priamry" (click)="togglestyle()" >Toggle Style</button>
+      
+    </div>
+  </div>
+ </div>
